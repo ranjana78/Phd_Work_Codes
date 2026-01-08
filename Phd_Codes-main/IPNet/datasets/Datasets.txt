@@ -1,0 +1,40 @@
+Medical Image Datasets – Official Download Links
+This document provides official and reliable download links for commonly used dermatology and skin disease image datasets, suitable for research, benchmarking, and academic use.
+________________________________________
+1. ISIC 2018 Dataset (Skin Lesion Analysis)
+Description:
+The ISIC 2018 Challenge dataset is widely used for tasks such as skin lesion classification, segmentation, and attribute detection. It contains dermoscopic images with expert annotations.
+Official Source:
+International Skin Imaging Collaboration (ISIC)
+Download Link:
+https://challenge.isic-archive.com/data/#2018
+Notes: - Requires free account registration and login - Images provided with ground-truth labels - Commonly used in MICCAI and CVPR research
+________________________________________
+2. Derm7pt Dataset
+Description:
+Derm7pt is a dermatology dataset designed around the 7-point checklist for melanoma detection. It includes clinical images, dermoscopic images, and structured diagnostic criteria.
+Official Source:
+Medical University of Vienna
+Download Link:
+https://derm.cs.sfu.ca/Welcome.html
+Alternative Mirror (Zenodo):
+https://zenodo.org/record/3567755
+Notes: - Freely available for academic research - Includes meta-data and diagnostic criteria - Suitable for explainable AI and few-shot learning research
+________________________________________
+3. SD-198 (Skin Disease-198) Dataset
+Description:
+SD-198 contains 6,584 clinical images across 198 different skin disease categories, making it useful for fine-grained classification and long-tailed learning.
+Official Source:
+Originally released by Chinese research groups
+Download Link:
+https://github.com/xpwu95/SD-198
+Direct Baidu Cloud Link (as provided by authors):
+https://pan.baidu.com/s/1rF6G6N8mF0ZAxk2nZc6P0Q
+Extraction Code:
+Provided on the GitHub page
+Notes: - Registration not required - Some labels may require translation/cleaning - Widely used for multi-class dermatology benchmarks
+________________________________________
+Citation Reminder
+If you use any of these datasets in your PhD work or publications, please ensure you: - Cite the original dataset papers - Follow dataset-specific license and usage terms - Mention dataset splits clearly in methodology
+________________________________________
+Prepared for PhD research and reproducible experimentation.

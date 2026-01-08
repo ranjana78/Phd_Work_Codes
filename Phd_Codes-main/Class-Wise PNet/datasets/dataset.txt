@@ -1,0 +1,43 @@
+BC-100X (BreakHis) Dataset – Official Download Information
+This document provides official and reliable access information for the BC-100X dataset, which is derived from the BreakHis (Breast Cancer Histopathological) dataset and commonly used in medical image analysis and deep learning research.
+________________________________________
+1. BreakHis Dataset (Breast Cancer Histopathological Images)
+Description:
+BreakHis is a well-known histopathology image dataset for breast cancer classification. It contains microscopic biopsy images of benign and malignant breast tumors collected at different magnification factors.
+Key Characteristics: - Total images: 7,909 - Classes: Benign (4 subtypes), Malignant (4 subtypes) - Magnifications: 40X, 100X, 200X, 400X - Image format: RGB, PNG/JPG
+________________________________________
+2. BC-100X Subset
+What is BC-100X?
+BC-100X refers to the 100× magnification subset of the BreakHis dataset. It is frequently used in: - Few-shot learning experiments - Prototype-based networks - Medical image benchmarking - Class-imbalanced learning studies
+Why 100X? - Balanced tissue-level detail - Reduced noise compared to 400X - More discriminative patterns than 40X
+________________________________________
+3. Official Download Link
+Primary Official Source (Kaggle):
+https://www.kaggle.com/datasets/ambarish/breakhis
+Note: Requires free Kaggle account login and acceptance of dataset terms.
+Alternative Official Source (Original Authors – UFPR):
+https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/
+________________________________________
+4. How to Extract BC-100X from BreakHis
+After downloading the full BreakHis dataset, select only the 100X magnification images.
+Typical folder pattern:
+BreakHis_v1/
+ ├── histology_slides/
+ │    ├── benign/
+ │    │    ├── S0*/100X/
+ │    └── malignant/
+ │         ├── S0*/100X/
+You can filter images by checking the folder name containing 100X.
+________________________________________
+5. Common Research Usage
+•	Binary classification: Benign vs Malignant
+•	Multi-class classification: 8 tumor subtypes
+•	Few-shot and meta-learning (ProtoNet, MAML)
+•	Explainable AI for histopathology
+This dataset is frequently used in MICCAI, IEEE TMI, and Medical Image Analysis publications.
+________________________________________
+6. Citation Reminder
+If you use BreakHis or BC-100X in your research, please cite:
+Spanhol, F. A., et al., “A Dataset for Breast Cancer Histopathological Image Classification”, IEEE Transactions on Biomedical Engineering.
+________________________________________
+Prepared for PhD research, reproducibility, and benchmarking.

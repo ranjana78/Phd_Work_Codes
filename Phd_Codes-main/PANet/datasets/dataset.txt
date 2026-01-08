@@ -1,0 +1,56 @@
+Medical Image Datasets – Official Download Links
+This document provides official and reliable download information for the following datasets: - BreakHis (Breast Cancer Histopathology) - BloodMNIST - PathMNIST - DermaMNIST - OrganAMNIST
+These datasets are widely used in medical image classification, few-shot learning, and benchmarking research.
+________________________________________
+1. BreakHis Dataset (Breast Cancer Histopathological Images)
+Description:
+BreakHis is a large-scale histopathology dataset for breast cancer diagnosis, containing benign and malignant tumor images at multiple magnification levels.
+Key Characteristics: - Total images: 7,909 - Classes: Benign (4 subtypes) and Malignant (4 subtypes) - Magnifications: 40X, 100X, 200X, 400X - Image type: RGB histopathology images
+Official Download Links: - Kaggle (recommended):
+https://www.kaggle.com/datasets/ambarish/breakhis
+•	Original UFPR Source:
+https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/
+Notes: - Kaggle account required - Commonly used for binary, multi-class, and few-shot learning experiments
+________________________________________
+2. BloodMNIST
+Description:
+BloodMNIST is part of the MedMNIST benchmark and contains microscopic blood cell images for multi-class classification.
+Key Characteristics: - Total images: 17,092 - Classes: 8 blood cell categories - Image size: 28×28 RGB - Predefined train/validation/test splits
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+Python Installation:
+pip install medmnist
+________________________________________
+3. PathMNIST
+Description:
+PathMNIST consists of colorectal cancer histopathology image patches extracted from whole-slide images and is designed for multi-class tissue classification.
+Key Characteristics: - Classes: 9 tissue types - Image size: 28×28 RGB - Source: NCT-CRC-HE-100K dataset
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+________________________________________
+4. DermaMNIST
+Description:
+DermaMNIST is a dermoscopic image dataset for skin lesion classification, derived from the HAM10000 dataset and standardized under the MedMNIST framework.
+Key Characteristics: - Classes: 7 skin lesion categories - Image size: 28×28 RGB - Suitable for lightweight and few-shot benchmarks
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+________________________________________
+5. OrganAMNIST
+Description:
+OrganAMNIST is a multi-class dataset of abdominal organ images derived from CT scans, provided as part of the MedMNIST benchmark.
+Key Characteristics: - Classes: 11 abdominal organs - Image size: 28×28 grayscale - Task: Multi-class classification
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+________________________________________
+6. Citation Reminder
+If you use these datasets in your research or publications, please ensure you: - Cite the original BreakHis paper - Cite the MedMNIST benchmark paper for BloodMNIST, PathMNIST, DermaMNIST, and OrganAMNIST - Follow dataset-specific licenses and usage terms
+________________________________________
+Prepared for PhD research, reproducibility, and benchmarking.

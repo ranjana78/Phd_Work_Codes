@@ -1,0 +1,43 @@
+Derm7pt, ISIC-2019 and HAM10000 Datasets – Official Download Information
+This document provides official, reliable, and citable download information for three widely used dermatology datasets:
+•	Derm7pt (Explainable dermatology dataset)
+•	ISIC 2019 (Large-scale skin lesion classification)
+•	HAM10000 (Human Against Machine dermatology dataset)
+These datasets are extensively used in skin lesion analysis, few-shot learning, explainable AI, and medical image benchmarking research.
+________________________________________
+1. Derm7pt Dataset
+Description:
+Derm7pt is a dermatology dataset based on the 7-point checklist for melanoma diagnosis. It is specifically designed to support explainable AI, as it includes both image-level labels and structured diagnostic criteria used by dermatologists.
+Key Characteristics: - Image types: Dermoscopic and clinical images - Tasks supported: - Skin lesion classification - 7-point diagnostic criteria prediction - Explainable and interpretable AI - Includes meta-data and clinical attributes
+Official Download Links: - Primary Website:
+https://derm.cs.sfu.ca/Welcome.html
+•	Zenodo (Recommended for stability):
+https://zenodo.org/record/3567755
+Notes: - Freely available for academic research - Zenodo provides versioned and citable access - Widely used in MICCAI and XAI-focused studies
+________________________________________
+2. ISIC 2019 Dataset
+Description:
+The ISIC 2019 Challenge dataset is a large-scale dermoscopic image dataset released for multi-class skin lesion classification. It is one of the most widely adopted benchmarks in skin lesion analysis.
+Key Characteristics: - Total images: ~25,000 dermoscopic images - Classes: 8 skin lesion categories - Image type: Dermoscopic RGB images - Task type: Multi-class classification
+Official Download Link: - ISIC Archive (2019 Challenge):
+https://challenge.isic-archive.com/data/#2019
+Notes: - Free account registration required - Images and ground-truth labels provided separately - Common benchmark in MICCAI and CVPR workshops
+________________________________________
+3. HAM10000 Dataset
+Description:
+HAM10000 (Human Against Machine with 10000 training images) is a large dermatoscopic image dataset created to benchmark human and machine performance in skin lesion diagnosis.
+Key Characteristics: - Total images: 10,015 - Classes: 7 common pigmented skin lesion categories - Image type: Dermoscopic RGB images - Source institutions: Austria and Australia
+Official Download Link: - Kaggle (Official Release):
+https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000
+Notes: - Kaggle account required - Includes lesion metadata (age, sex, localization) - Frequently used for transfer learning and few-shot benchmarks
+________________________________________
+4. Common Research Applications
+•	Skin lesion classification
+•	Few-shot and meta-learning (ProtoNet, MAML)
+•	Explainable AI and clinical decision support
+•	Cross-dataset generalization studies
+________________________________________
+5. Citation Reminder
+If you use these datasets in your research, please ensure you: - Cite the original Derm7pt publication - Cite the ISIC 2019 Challenge paper - Cite the HAM10000 dataset paper - Follow dataset-specific license and usage terms
+________________________________________
+Prepared for PhD research, reproducibility, and experimental documentation.

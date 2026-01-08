@@ -1,0 +1,48 @@
+Derm7pt, ChestMNIST and PathMNIST Datasets – Official Download Information
+This document provides official, reliable, and citable download information for the following widely used medical imaging datasets:
+•	Derm7pt (Dermatology – Explainable AI)
+•	ChestMNIST (Chest X-ray Benchmark)
+•	PathMNIST (Histopathology Tissue Classification)
+These datasets are commonly used in medical image classification, few-shot learning, explainable AI, and benchmarking research.
+________________________________________
+1. Derm7pt Dataset
+Description:
+Derm7pt is a dermatology dataset based on the 7-point checklist for melanoma diagnosis. It is specifically designed to support explainable AI, as it includes both image-level labels and structured diagnostic criteria.
+Key Characteristics: - Image types: Dermoscopic and clinical images - Tasks: - Skin lesion classification - 7-point diagnostic criteria prediction - Explainable AI - Includes meta-data and diagnostic attributes
+Official Download Links: - Primary Website:
+https://derm.cs.sfu.ca/Welcome.html
+•	Zenodo (Recommended):
+https://zenodo.org/record/3567755
+Notes: - Freely available for academic research - Zenodo provides stable versioning - Widely used in MICCAI and explainable AI literature
+________________________________________
+2. ChestMNIST
+Description:
+ChestMNIST is part of the MedMNIST benchmark and is derived from the NIH ChestX-ray14 dataset. It is designed for multi-label classification of thoracic diseases using chest X-ray images.
+Key Characteristics: - Total images: 112,120 (original source) - Labels: 14 thoracic disease labels - Image size: 28 × 28 grayscale - Task type: Multi-label classification - Predefined train/validation/test splits
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+Python Installation:
+pip install medmnist
+Notes: - Automatic download via Python API - Standardized evaluation protocol - Suitable for lightweight and few-shot experiments
+________________________________________
+3. PathMNIST
+Description:
+PathMNIST is a histopathology dataset consisting of colorectal cancer tissue patches, derived from the NCT-CRC-HE-100K dataset and standardized under the MedMNIST framework.
+Key Characteristics: - Classes: 9 tissue types - Image size: 28 × 28 RGB - Task type: Multi-class classification - Patch-based histopathology images
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+________________________________________
+4. Common Research Applications
+•	Few-shot and meta-learning (ProtoNet, MAML)
+•	Explainable AI (Derm7pt)
+•	Multi-class and multi-label classification
+•	Lightweight benchmarking of CNNs and ViTs
+________________________________________
+5. Citation Reminder
+If you use these datasets in your research, please ensure you: - Cite the original Derm7pt publication - Cite the MedMNIST benchmark paper for ChestMNIST and PathMNIST - Follow dataset-specific license and usage terms
+________________________________________
+Prepared for PhD research, reproducibility, and experimental documentation.

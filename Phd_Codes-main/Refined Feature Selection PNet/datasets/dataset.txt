@@ -1,0 +1,46 @@
+Derm7pt and BloodMNIST Datasets – Official Download Information
+This document provides official, reliable, and citable access information for the Derm7pt and BloodMNIST datasets, both widely used in medical image analysis, explainable AI, and few-shot learning research.
+________________________________________
+1. Derm7pt Dataset
+Description:
+Derm7pt is a dermatology dataset developed based on the 7-point checklist used by dermatologists for melanoma diagnosis. The dataset supports not only classification but also explainable and criteria-based AI modeling.
+Key Characteristics: - Image types: Dermoscopic and clinical images - Tasks supported: - Skin lesion classification - 7-point diagnostic criteria prediction - Explainable AI - Includes structured meta-data (diagnostic criteria)
+Official Source:
+Medical University of Vienna / Simon Fraser University
+Primary Download Link:
+https://derm.cs.sfu.ca/Welcome.html
+Zenodo Mirror:
+https://zenodo.org/record/3567755
+Notes: - Freely available for academic research - No login required (Zenodo recommended) - Widely used in MICCAI and explainable AI research
+________________________________________
+2. BloodMNIST Dataset
+Description:
+BloodMNIST is part of the MedMNIST collection and consists of microscopic images of blood cells for multi-class classification. It is designed for lightweight benchmarking and standardized evaluation of medical vision models.
+Key Characteristics: - Total images: 17,092 - Classes: 8 blood cell types - Image size: 28 × 28 RGB - Task type: Multi-class classification
+Official Source:
+MedMNIST Benchmark
+Primary Download Link:
+https://medmnist.com/
+Direct GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+Python Installation:
+pip install medmnist
+Dataset Loading Example:
+import medmnist
+from medmnist import BloodMNIST
+Notes: - No manual download required when using Python API - Predefined train/validation/test splits provided - Commonly used for benchmarking ProtoNet, MAML, and lightweight CNNs
+________________________________________
+3. Common Research Applications
+•	Multi-class medical image classification
+•	Few-shot and meta-learning
+•	Explainable AI (Derm7pt)
+•	Lightweight benchmarking (BloodMNIST)
+•	Comparative evaluation of backbone networks
+________________________________________
+4. Citation Reminder
+If you use these datasets in your research, please cite:
+•	Derm7pt original publication (7-point checklist melanoma diagnosis)
+•	MedMNIST / BloodMNIST benchmark paper
+Always follow dataset-specific license and usage terms.
+________________________________________
+Prepared for PhD research, reproducibility, and dataset documentation.

@@ -1,0 +1,57 @@
+ChestMNIST, PathMNIST, BloodMNIST and Ocular Disease Datasets – Official Download Information
+This document provides official, reliable, and citable download information for the following medical imaging datasets:
+•	ChestMNIST (Chest X-ray)
+•	PathMNIST (Histopathology)
+•	BloodMNIST (Hematology)
+•	Ocular Disease Dataset (Fundus Imaging)
+These datasets are widely used in medical image classification, few-shot learning, explainable AI, and benchmarking research.
+________________________________________
+1. ChestMNIST
+Description:
+ChestMNIST is part of the MedMNIST benchmark and is derived from the NIH ChestX-ray14 dataset. It supports multi-label classification of thoracic diseases using chest X-ray images.
+Key Characteristics: - Labels: 14 thoracic disease categories - Image size: 28 × 28 grayscale - Task type: Multi-label classification - Predefined train/validation/test splits
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+Python Installation:
+pip install medmnist
+________________________________________
+2. PathMNIST
+Description:
+PathMNIST is a histopathology dataset consisting of colorectal cancer tissue patches derived from the NCT-CRC-HE-100K dataset and standardized under the MedMNIST framework.
+Key Characteristics: - Classes: 9 tissue types - Image size: 28 × 28 RGB - Task type: Multi-class classification
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+________________________________________
+3. BloodMNIST
+Description:
+BloodMNIST is part of the MedMNIST benchmark and contains microscopic images of blood cells for multi-class classification.
+Key Characteristics: - Total images: 17,092 - Classes: 8 blood cell types - Image size: 28 × 28 RGB
+Official Download Links: - MedMNIST Website:
+https://medmnist.com/
+•	GitHub Repository:
+https://github.com/MedMNIST/MedMNIST
+________________________________________
+4. Ocular Disease Dataset (ODIR-5K)
+Description:
+The Ocular Disease Intelligent Recognition dataset (ODIR-5K) consists of color fundus photographs labeled for multiple ocular diseases. It is commonly used for retinal disease classification and multi-label learning.
+Key Characteristics: - Total images: 5,000 patients (left and right eye images) - Disease categories: Normal, Diabetes, Glaucoma, Cataract, AMD, Hypertension, Myopia, Others - Image type: Color fundus photographs - Task type: Multi-label classification
+Official Download Links: - Kaggle (ODIR-5K):
+https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k
+•	Original Challenge Page:
+https://odir2019.grand-challenge.org/
+Notes: - Kaggle account required - Includes metadata and clinical labels
+________________________________________
+5. Common Research Applications
+•	Few-shot and meta-learning (ProtoNet, MAML)
+•	Multi-class and multi-label classification
+•	Medical benchmarking and ablation studies
+•	Explainable AI in medical imaging
+________________________________________
+6. Citation Reminder
+If you use these datasets in your research, please ensure you: - Cite the MedMNIST benchmark paper for ChestMNIST, PathMNIST, and BloodMNIST - Cite the ODIR-5K dataset paper or challenge description - Follow dataset-specific license and usage terms
+________________________________________
+Prepared for PhD research, reproducibility, and experimental documentation.
