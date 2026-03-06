@@ -23,32 +23,62 @@ The primary objectives of this PhD research are:
 ## 📂 Repository Structure (Detailed)
 
 ```
-Phd_Codes/
+Phd_Work_Codes-main/
 │
-├── Affinity Sampling/
-│   ├── codes/
-│   │   └── CE_Affinity(CONV4).ipynb
-│   ├── datasets/
-│   │   └── dataset.txt
-│   └── papers/
-│
-├── Class-Wise PNet/
-│   ├── codes/
-│   │   └── Class_Wise FS PNet.ipynb
-│   ├── datasets/
-│   │   └── dataset.txt
-│   └── papers/
-│       └── ISBI_Satellite_Workshop_2024.pdf
-│
-├── DLAS/
-│   ├── codes/
-│   │   ├── CE_95_ACS+AIS_CONV4.ipynb
-│   │   ├── CE_95_Class_Confidence(CONV4).ipynb
-│   │   └── CE_95_Instance(CONV4).ipynb
-│   ├── datasets/
-│   └── papers/
-│
-└── README.md
+└── Phd_Codes-main/
+    │
+    ├── Affinity Sampling/
+    │   ├── codes/
+    │   │   └── CE_Affinity(CONV4).ipynb
+    │   └── datasets/
+    │       └── dataset.txt
+    │
+    ├── Class-Wise PNet/
+    │   ├── codes/
+    │   │   └── Class_Wise FS PNet.ipynb
+    │   ├── datasets/
+    │   │   └── dataset.txt
+    │   └── papers/
+    │       └── ISBI_Satellite_Workshop_2024.pdf
+    │
+    ├── DLAS/
+    │   ├── codes/
+    │   │   ├── CE_95_ACS+AIS_CONV4.ipynb
+    │   │   ├── CE_95_Class_Confidence(CONV4).ipynb
+    │   │   └── CE_95_Instance(CONV4).ipynb
+    │   ├── datasets/
+    │   │   └── dataset.txt
+    │   └── papers/
+    │       └── Dual-Level_Adaptive_Sampling_for_Enhanced_Few-Shot_Medical_Image_Classification.pdf
+    │
+    ├── IPNet/
+    │   ├── codes/
+    │   │   ├── IPNet.py
+    │   │   ├── PNet.ipynb
+    │   │   └── RRPNet.py
+    │   ├── datasets/
+    │   │   └── Datasets.txt
+    │   └── papers/
+    │
+    ├── PANet/
+    │   ├── codes/
+    │   │   └── PANet.py
+    │   ├── datasets/
+    │   │   └── dataset.txt
+    │   └── papers/
+    │
+    ├── MCS/
+    │   ├── codes/
+    │   │   └── CE_MetaData_Class_CONV4_2_2.ipynb
+    │   └── datasets/
+    │       └── dataset.txt
+    │
+    └── Refined Feature Selection PNet/
+        ├── codes/
+        │   └── FS(GAP+Others)_CE_PNET(CONV4_2_2).ipynb
+        ├── datasets/
+        │   └── dataset.txt
+        └── papers/
 ```
 
 ---
