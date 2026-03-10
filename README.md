@@ -8,15 +8,19 @@ This repository is structured to ensure **reproducibility**, **clarity**, and **
 
 ---
 
-## 📌 Research Scope and Objectives
+📌 Research Scope and Objectives
 
 The primary objectives of this PhD research are:
 
-- Designing **adaptive sampling strategies** for few-shot learning
-- Improving **class and instance-level generalization**
-- Developing **prototype-based learning frameworks**
-- Applying methods to **medical imaging datasets**
-- Enhancing **interpretability and robustness** in AI models
+Designing adaptive and affinity-based sampling strategies (e.g., Adaptive Class Sampling and Adaptive Instance Sampling) for few-shot learning
+
+Improving class-confidence and instance-level generalization under limited medical training data
+
+Developing prototype-based learning frameworks, including class-wise prototype networks (PNet) for few-shot classification
+
+Applying the proposed methods to medical imaging datasets such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR
+
+Enhancing interpretability, robustness, and reliability in AI models for medical image classification
 
 ---
 
