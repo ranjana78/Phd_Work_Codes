@@ -10,17 +10,17 @@ This repository is structured to ensure **reproducibility**, **clarity**, and **
 
 📌 Research Scope and Objectives
 
-The primary objectives of this PhD research are:
+-The primary objectives of this PhD research are:
 
-Designing adaptive and affinity-based sampling strategies (e.g., Adaptive Class Sampling and Adaptive Instance Sampling) for few-shot learning
+-Designing adaptive and affinity-based sampling strategies (e.g., Adaptive Class Sampling and Adaptive Instance Sampling) for few-shot learning
 
-Improving class-confidence and instance-level generalization under limited medical training data
+-Improving class-confidence and instance-level generalization under limited medical training data
 
-Developing prototype-based learning frameworks, including class-wise prototype networks (PNet) for few-shot classification
+-Developing prototype-based learning frameworks, including class-wise prototype networks (PNet) for few-shot classification
 
-Applying the proposed methods to medical imaging datasets such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR
+-Applying the proposed methods to medical imaging datasets such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR
 
-Enhancing interpretability, robustness, and reliability in AI models for medical image classification
+-Enhancing interpretability, robustness, and reliability in AI models for medical image classification
 
 ---
 
@@ -87,117 +87,134 @@ Phd_Work_Codes-main/
 
 ---
 
-## 📁 Module-wise Description
+## 📦 Module-wise Description
 
-### 1️⃣ Affinity Sampling
-
-**Objective:**
-Improve few-shot learning performance by selecting **semantically similar and informative samples** based on affinity measures.
-
-**Key Ideas:**
-- Affinity-based sample selection
-- Improved class separability
-- Reduced intra-class variance
-
-**Implementation:**
-- Backbone: Conv4
-- Loss: Cross-Entropy
-- Notebook: `CE\_Affinity(CONV4).ipynb`
-
-**Use Case:**
-Few-shot classification under limited labeled data, especially in medical imaging.
+### 🔹 Module 1: Data Acquisition and Preprocessing
+This module focuses on collecting and preparing medical imaging datasets for experimentation. Publicly available datasets such as **ChestMNIST, PathMNIST, BloodMNIST, and ODIR** are used. The preprocessing stage includes image normalization, resizing, noise removal, and dataset partitioning into training, validation, and testing sets suitable for few-shot learning scenarios.
 
 ---
 
-### 2️⃣ Class-Wise Prototypical Network (Class-Wise PNet)
-
-**Objective:**
-Enhance standard Prototypical Networks by **learning class-wise discriminative prototypes**.
-
-**Key Ideas:**
-- Class-level representation refinement
-- Better handling of inter-class similarity
-- Stable prototype estimation
-
-**Implementation:**
-- Few-shot Prototypical Network
-- Episodic training
-- Notebook: `Class\_Wise FS PNet.ipynb`
-
-**Associated Publication:**
-- ISBI Satellite Workshop 2024
+### 🔹 Module 2: Adaptive Sampling Strategy Development
+This module develops **adaptive and affinity-based sampling strategies** to efficiently select informative samples during training. Techniques such as **Adaptive Class Sampling (ACS)** and **Adaptive Instance Sampling (AIS)** are implemented to dynamically prioritize important classes and instances, improving learning performance in few-shot environments.
 
 ---
 
-### 3️⃣ DLAS – Dual-Level Adaptive Sampling
-
-**Objective:**
-Jointly adapt sampling at **class level (ACS)** and **instance level (AIS)** to maximize learning efficiency.
-
-**Key Components:**
-
-#### 🔹 Adaptive Class Sampling (ACS)
-- Dynamically prioritizes harder or underrepresented classes
-
-#### 🔹 Adaptive Instance Sampling (AIS)
-- Focuses training on informative/hard instances
-
-**Implementation:**
-- Backbone: Conv4
-- Loss: Cross-Entropy
-- Notebooks:
-  - `CE\_95\_ACS+AIS\_CONV4.ipynb`
-  - `CE\_95\_Class\_Confidence(CONV4).ipynb`
-  - `CE\_95\_Instance(CONV4).ipynb`
-
-**Contribution:**
-Forms the **core contribution** of the PhD by integrating ACS and AIS into a unified framework.
+### 🔹 Module 3: Class-Confidence and Instance-Level Learning
+This module focuses on improving **class-level and instance-level generalization** by introducing **class-confidence–based sampling mechanisms**. The system evaluates prediction confidence to guide sample selection and balance class representation, helping the model learn more effectively from limited training data.
 
 ---
 
-## 📊 Datasets Used
-
-Experiments are conducted on multiple **medical imaging datasets**, including:
-
-- Derm7pt (Explainable dermatology)
-- ISIC 2018 / ISIC 2019 (Skin lesion analysis)
-- HAM10000
-- BreakHis (BC-100X)
-- ChestMNIST
-- PathMNIST
-- BloodMNIST
-- Ocular Disease (ODIR-5K)
-
-> Dataset download links and licenses are documented separately.
+### 🔹 Module 4: Prototype-Based Learning Framework
+This module implements **prototype-based learning models**, particularly **Class-Wise Prototype Networks (PNet)**. The framework learns representative prototypes for each class in the feature space and uses **distance-based classification** to improve decision boundaries and support few-shot classification tasks.
 
 ---
 
-## 🧪 Experimental Setup
-
-- Framework: **PyTorch**
-- Training paradigm: Episodic few-shot learning
-- Backbones: Conv4 (extendable to ResNet variants)
-- Evaluation: Accuracy, confidence-based metrics
+### 🔹 Module 5: DLAS-Based Feature Learning and Optimization
+This module integrates **Distance Learning with Adaptive Sampling (DLAS)** methods to enhance feature representation and improve sample selection during training. The combination of affinity-based sampling and prototype learning helps achieve better feature discrimination and model stability.
 
 ---
 
-## 📦 Required Packages
+### 🔹 Module 6: Evaluation and Performance Analysis
+This module evaluates the proposed methods using metrics such as **Accuracy, Precision, Recall, F1-score, and Confusion Matrix**. Comparative analysis with baseline models is conducted to assess improvements in **generalization, robustness, and interpretability** for medical image classification tasks.
 
-The following Python packages are required to run the experiments:
+## ⚙️ Implementation
+
+The implementation of this research is organized into multiple stages to develop and evaluate adaptive sampling and prototype-based few-shot learning methods for medical image classification.
+
+1. **Dataset Preparation**
+   - Medical imaging datasets including **ChestMNIST, PathMNIST, BloodMNIST, and ODIR** are collected.
+   - Images are preprocessed through normalization, resizing, and dataset splitting into **training, validation, and testing sets**.
+   - Few-shot settings are created by limiting the number of labeled samples per class.
+
+2. **Feature Extraction**
+   - Deep learning models are used to extract discriminative features from medical images.
+   - Feature embeddings are generated to represent each sample in a latent feature space.
+
+3. **Adaptive Sampling Mechanisms**
+   - **Adaptive Class Sampling (ACS)** dynamically selects informative classes during training.
+   - **Adaptive Instance Sampling (AIS)** identifies representative instances within each class.
+   - These strategies improve the efficiency of learning under limited data conditions.
+
+4. **Prototype-Based Learning**
+   - A **Class-Wise Prototype Network (PNet)** is implemented to learn representative prototypes for each class.
+   - Distance-based classification is used to assign labels based on similarity to class prototypes.
+
+5. **DLAS Integration**
+   - **Distance Learning with Adaptive Sampling (DLAS)** combines affinity-based sampling and prototype learning.
+   - This integration enhances feature discrimination and improves training stability.
+
+6. **Model Evaluation**
+   - Performance is evaluated using **Accuracy, Precision, Recall, F1-score, and Confusion Matrix**.
+   - Comparative experiments are conducted against baseline models to demonstrate improvements in generalization and robustness.
+
+---
+
+## ⭐ Research Contributions
+
+The major contributions of this research include:
+
+- Development of **adaptive and affinity-based sampling strategies** to improve training efficiency in few-shot learning environments.
+
+- Introduction of **class-confidence and instance-level sampling mechanisms** to enhance model generalization under limited training data.
+
+- Design of a **prototype-based learning framework using Class-Wise Prototype Networks (PNet)** for improved representation learning and classification.
+
+- Integration of **Distance Learning with Adaptive Sampling (DLAS)** to optimize sample selection and feature learning.
+
+- Comprehensive evaluation of the proposed methods on **medical imaging datasets such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR**.
+
+- Demonstration of improved **robustness, interpretability, and performance** in AI models for medical image classification.
+
+---
+
+## 📂 Datasets Used
+
+The experiments in this research are conducted on publicly available **medical imaging datasets** designed for benchmarking machine learning models in healthcare.
+
+- **ChestMNIST**
+  - A large-scale chest X-ray dataset derived from the NIH ChestX-ray dataset.
+  - Contains multiple thoracic disease labels for multi-label classification tasks.
+
+- **PathMNIST**
+  - A pathology image dataset consisting of histopathological images.
+  - Used for multi-class classification of different tissue types.
+
+- **BloodMNIST**
+  - A microscopic blood cell image dataset.
+  - Designed for classification of different blood cell types.
+
+- **ODIR (Ocular Disease Intelligent Recognition)**
+  - A retinal fundus image dataset for ocular disease diagnosis.
+  - Contains images representing various eye diseases.
+
+These datasets are used to evaluate the effectiveness of **few-shot learning, adaptive sampling, and prototype-based learning approaches** in medical image classification.
+
+---
+
+## 🧰 Packages Used
+
+The implementation is developed using **Python-based deep learning and data science libraries**.
+
+- **Python**
+- **PyTorch**
+- **Torchvision**
+- **NumPy**
+- **Pandas**
+- **Matplotlib**
+- **Scikit-learn**
+- **OpenCV**
+- **tqdm**
+
+These packages support **deep learning model development, data preprocessing, visualization, and evaluation**.
+
+---
+
+## 📦 Packages Required
+
+Install the required packages using **pip** before running the project.
 
 ```bash
-python >= 3.8
-torch
-torchvision
-numpy
-scipy
-scikit-learn
-matplotlib
-tqdm
-opencv-python
-pandas
-jupyter
-medmnist
+pip install torch torchvision numpy pandas matplotlib scikit-learn opencv-python tqdm
 ```
 
 Optional (for visualization and analysis):
