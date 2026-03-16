@@ -6,6 +6,28 @@ The work focuses on **few-shot learning**, **medical image analysis**, and **ada
 
 This repository is structured to ensure **reproducibility**, **clarity**, and **ease of navigation** for reviewers, collaborators, and future researchers.
 
+## 🎯 Research Overview
+
+My research focuses on improving **few-shot learning for medical image classification** by enhancing **Prototypical Networks within a meta-learning framework**. The work addresses the critical challenge of **data scarcity in clinical AI**, where medical datasets often contain very limited labeled samples.
+
+Specifically, the research aims to design more **robust and discriminative prototype-based learning mechanisms** by improving how prototypes are constructed, how features are represented and refined, and how episodic training tasks are sampled.
+
+---
+
+## ⭐ Key Research Contributions
+
+### 1️⃣ Prototype Construction Improvement
+Developing **influence-based reweighting strategies** so that more informative support samples contribute more strongly to class prototypes, improving the robustness of prototype representations.
+
+### 2️⃣ Feature Refinement
+Selecting and emphasizing the most **discriminative feature maps and channels** to improve prototype quality and enhance classification performance.
+
+### 3️⃣ Domain-Specific Feature Integration
+Incorporating **texture-aware representations** such as **wavelet-based features** to capture subtle morphological patterns commonly found in medical images.
+
+### 4️⃣ Optimized Episodic Sampling
+Designing **adaptive and metadata-guided sampling strategies** to construct more informative and balanced few-shot learning tasks during meta-training.
+
 ## 📂 Repository Structure
 
 ```
@@ -67,27 +89,7 @@ Phd_Work_Codes-main/
         └── papers/
 ```
         
-## 🎯 Research Overview
 
-My research focuses on improving **few-shot learning for medical image classification** by enhancing **Prototypical Networks within a meta-learning framework**. The work addresses the critical challenge of **data scarcity in clinical AI**, where medical datasets often contain very limited labeled samples.
-
-Specifically, the research aims to design more **robust and discriminative prototype-based learning mechanisms** by improving how prototypes are constructed, how features are represented and refined, and how episodic training tasks are sampled.
-
----
-
-## ⭐ Key Research Contributions
-
-### 1️⃣ Prototype Construction Improvement
-Developing **influence-based reweighting strategies** so that more informative support samples contribute more strongly to class prototypes, improving the robustness of prototype representations.
-
-### 2️⃣ Feature Refinement
-Selecting and emphasizing the most **discriminative feature maps and channels** to improve prototype quality and enhance classification performance.
-
-### 3️⃣ Domain-Specific Feature Integration
-Incorporating **texture-aware representations** such as **wavelet-based features** to capture subtle morphological patterns commonly found in medical images.
-
-### 4️⃣ Optimized Episodic Sampling
-Designing **adaptive and metadata-guided sampling strategies** to construct more informative and balanced few-shot learning tasks during meta-training.
 
 ---
 
