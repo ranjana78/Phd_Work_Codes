@@ -102,94 +102,120 @@ By addressing the data scarcity problem in medical imaging, the proposed approac
 Overall, the research aims to **improve the robustness, efficiency, and accuracy of few-shot medical image classification models**, enabling reliable performance even when training data is limited.
 
 ---
-
 ## 📦 Module-wise Description
 
-### 🔹 Module 1: Data Acquisition and Preprocessing
+### 🔹 Module 1: Influential Prototypical Networks (IPNet)
 
-This module focuses on collecting and preparing medical imaging datasets for experimentation. Publicly available datasets such as **ChestMNIST, PathMNIST, BloodMNIST, and ODIR** are used.
+This module implements **Influential Prototypical Networks (IPNet)**, which improve prototype construction in few-shot learning.
 
-Key steps include:
+Traditional Prototypical Networks compute class prototypes using a simple average of support samples, which may be sensitive to noisy or non-representative instances.
 
-- Image normalization and resizing  
-- Noise removal and preprocessing  
-- Dataset organization for few-shot learning tasks  
-- Splitting datasets into **training, validation, and testing sets**
+IPNet addresses this limitation by:
 
-These preprocessing steps ensure that the data is standardized and suitable for training deep learning models.
+- Assigning **importance weights to support samples**
+- Identifying **influential samples based on statistical alignment**
+- Reducing the impact of **outliers and noisy data**
 
----
-
-### 🔹 Module 2: Affinity-Based Sampling
-
-This module implements **affinity-based sampling strategies** to select informative samples during training.
-
-Main objectives:
-
-- Compute similarity relationships between samples  
-- Identify representative instances within each class  
-- Select informative samples to improve training efficiency
-
-This approach reduces redundant samples and improves learning performance in **few-shot learning environments**.
+This results in **more reliable class prototypes and improved classification performance in few-shot medical image datasets**.
 
 ---
 
-### 🔹 Module 3: Class-Wise Prototype Network (PNet)
+### 🔹 Module 2: Class-Wise Feature Map Selection Prototypical Network
 
-This module focuses on **prototype-based learning** using Class-Wise Prototype Networks.
+This module introduces **Class-Wise Feature Map Selection** to improve prototype quality.
 
-Key concepts include:
+Standard PNet models treat all feature channels equally when constructing prototypes. However, many channels may contain redundant or less informative information.
 
-- Learning a **prototype representation** for each class  
-- Using **distance-based similarity** for classification  
-- Improving generalization when only a **few labeled samples** are available per class
+This module improves representation by:
 
-Prototype networks help create effective decision boundaries in the feature space.
+- Ranking feature maps using **Global Average Pooling (GAP)**
+- Selecting **top-K discriminative feature channels**
+- Masking less relevant channels before prototype aggregation
 
----
-
-### 🔹 Module 4: Dual-Level Adaptive Sampling (DLAS)
-
-The **DLAS module** introduces adaptive sampling strategies to improve training efficiency.
-
-The framework includes:
-
-- **Adaptive Class Sampling (ACS)** – prioritizes important classes during training  
-- **Adaptive Instance Sampling (AIS)** – selects informative samples within each class  
-
-Combining these techniques improves **sample diversity, learning efficiency, and model generalization**.
+This selective feature strategy enhances **prototype discriminability and classification accuracy**.
 
 ---
 
-### 🔹 Module 5: Prototype-Based Learning Architectures
+### 🔹 Module 3: Refined Feature Selection Prototypical Network
 
-This module includes implementations of advanced prototype learning models.
+This module extends the previous feature selection approach by introducing **multiple feature selection strategies**.
 
-**IPNet (Influential Prototype Network)**
+Instead of relying on a single selection criterion, it combines several statistical measures to identify informative feature maps.
 
-- Learns robust class prototypes using instance-level information  
-- Reduces the influence of noisy samples
+The approach includes:
 
-**PANet (Prototype Alignment Network)**
+- **Global Average Pooling (GAP)**
+- **Mixed Pooling**
+- **Variance-based feature selection**
 
-- Improves alignment between **support and query samples**  
-- Enhances feature representation for classification tasks
-
-These models improve **classification performance in few-shot learning scenarios**.
+By combining these strategies, the model captures feature importance from different perspectives, resulting in **more robust prototype representations**.
 
 ---
 
-### 🔹 Module 6: Metadata-Guided Class Sampling (MCS)
+### 🔹 Module 4: Prototypical Aggregate Network (PANet)
 
-This module explores the use of **metadata information** to guide sample selection during training.
+This module introduces **PANet**, a domain-aware framework designed for medical image classification.
 
-Key ideas:
+PANet integrates **spatial and textural information** to improve feature representation.
 
-- Use dataset-level and class-level statistics  
-- Improve the sampling strategy using metadata insights  
-- Enhance learning stability in limited-data scenarios
+Key components include:
 
-This approach helps models focus on **informative and challenging samples**.
+- **Discrete Wavelet Transform (DWT)** to extract texture information  
+- Integration of **frequency-domain features with spatial features**
+- **Mean Feature Aggregation Module (MFAM)** to combine multi-level features
+
+This architecture preserves **fine-grained morphological details** such as edges and textures that are critical for medical image analysis.
+
+---
+
+### 🔹 Module 5: Dual-Level Adaptive Sampling (DLAS)
+
+This module proposes **Dual-Level Adaptive Sampling (DLAS)** to improve episodic training in few-shot learning.
+
+Standard meta-learning frameworks rely on random sampling of classes and instances, which may produce uninformative training tasks.
+
+DLAS introduces two adaptive strategies:
+
+**Adaptive Class Sampling (ACS)**  
+- Prioritizes **difficult or underperforming classes**
+
+**Adaptive Instance Sampling (AIS)**  
+- Selects **informative or uncertain samples** within each class
+
+By combining these two mechanisms, DLAS creates **more informative training episodes and improves model generalization**.
+
+---
+
+### 🔹 Module 6: Affinity-Guided Adaptive Sampling
+
+This module introduces an **Affinity-Based Sampling Strategy** for constructing better training tasks.
+
+The method first analyzes **relationships between samples and classes** using similarity measures.
+
+Key ideas include:
+
+- Construction of a **Sample Affinity Matrix (SAM)**
+- Estimation of **Class Affinity Scores (CAS)**
+- Sampling classes based on **similarity relationships**
+
+Unlike conventional sampling approaches, this method **first analyzes instance relationships and then derives class selection**, leading to more structured episodic tasks.
+
+---
+
+### 🔹 Module 7: Metadata-Guided Class Sampling (MCS)
+
+This module explores **metadata-driven task sampling** to further improve few-shot learning.
+
+Instead of relying only on learned embeddings, this approach uses **dataset-level meta-information**.
+
+The framework:
+
+- Extracts **class-level statistics from dataset attributes**
+- Uses a **Random Forest classifier** to estimate class difficulty
+- Prioritizes **challenging or underperforming classes** when constructing episodes
+
+This metadata-guided strategy helps the model focus on **informative and difficult classes**, improving training efficiency and classification performance.
+.
 
 ## 📂 Datasets Used
 
