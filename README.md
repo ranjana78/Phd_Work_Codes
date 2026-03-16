@@ -7,26 +7,6 @@ The work focuses on **few-shot learning**, **medical image analysis**, and **ada
 This repository is structured to ensure **reproducibility**, **clarity**, and **ease of navigation** for reviewers, collaborators, and future researchers.
 
 ---
-
-📌 Research Scope and Objectives
-
--The primary objectives of this PhD research are:
-
--Designing adaptive and affinity-based sampling strategies (e.g., Adaptive Class Sampling and Adaptive Instance Sampling) for few-shot learning
-
--Improving class-confidence and instance-level generalization under limited medical training data
-
--Developing prototype-based learning frameworks, including class-wise prototype networks (PNet) for few-shot classification
-
--Applying the proposed methods to medical imaging datasets such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR
-
--Enhancing interpretability, robustness, and reliability in AI models for medical image classification
-
----
-
-## 📂 Repository Structure (Detailed)
-
-```
 Phd_Work_Codes-main/
 │
 └── Phd_Codes-main/
@@ -83,89 +63,111 @@ Phd_Work_Codes-main/
         ├── datasets/
         │   └── dataset.txt
         └── papers/
-```
+## 🎯 Primary Objective of the Research
+
+The primary objective of this research is to develop **efficient few-shot learning frameworks for medical image classification** by integrating **adaptive sampling strategies and prototype-based deep learning models**.
+
+Medical imaging datasets often suffer from **limited labeled data**, making it challenging for traditional deep learning models to achieve high performance. This research addresses this challenge by designing methods that can learn effectively from **a small number of labeled samples per class**.
+
+The main goals of the research include:
+
+- Developing **prototype-based learning models** to represent each class using discriminative feature prototypes.
+- Designing **adaptive sampling strategies** to select informative training samples in few-shot learning scenarios.
+- Improving **feature representation and generalization** of deep learning models for medical image classification.
+- Enhancing learning efficiency through **Dual-Level Adaptive Sampling (DLAS)** and affinity-based sampling methods.
+- Evaluating the proposed methods on **publicly available medical imaging datasets** such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR.
+
+Overall, the research aims to **improve the robustness, efficiency, and accuracy of few-shot medical image classification models**, enabling reliable performance even when training data is limited.
 
 ---
 
 ## 📦 Module-wise Description
 
 ### 🔹 Module 1: Data Acquisition and Preprocessing
-This module focuses on collecting and preparing medical imaging datasets for experimentation. Publicly available datasets such as **ChestMNIST, PathMNIST, BloodMNIST, and ODIR** are used. The preprocessing stage includes image normalization, resizing, noise removal, and dataset partitioning into training, validation, and testing sets suitable for few-shot learning scenarios.
+
+This module focuses on collecting and preparing medical imaging datasets for experimentation. Publicly available datasets such as **ChestMNIST, PathMNIST, BloodMNIST, and ODIR** are used.
+
+Key steps include:
+
+- Image normalization and resizing  
+- Noise removal and preprocessing  
+- Dataset organization for few-shot learning tasks  
+- Splitting datasets into **training, validation, and testing sets**
+
+These preprocessing steps ensure that the data is standardized and suitable for training deep learning models.
 
 ---
 
-### 🔹 Module 2: Adaptive Sampling Strategy Development
-This module develops **adaptive and affinity-based sampling strategies** to efficiently select informative samples during training. Techniques such as **Adaptive Class Sampling (ACS)** and **Adaptive Instance Sampling (AIS)** are implemented to dynamically prioritize important classes and instances, improving learning performance in few-shot environments.
+### 🔹 Module 2: Affinity-Based Sampling
+
+This module implements **affinity-based sampling strategies** to select informative samples during training.
+
+Main objectives:
+
+- Compute similarity relationships between samples  
+- Identify representative instances within each class  
+- Select informative samples to improve training efficiency
+
+This approach reduces redundant samples and improves learning performance in **few-shot learning environments**.
 
 ---
 
-### 🔹 Module 3: Class-Confidence and Instance-Level Learning
-This module focuses on improving **class-level and instance-level generalization** by introducing **class-confidence–based sampling mechanisms**. The system evaluates prediction confidence to guide sample selection and balance class representation, helping the model learn more effectively from limited training data.
+### 🔹 Module 3: Class-Wise Prototype Network (PNet)
+
+This module focuses on **prototype-based learning** using Class-Wise Prototype Networks.
+
+Key concepts include:
+
+- Learning a **prototype representation** for each class  
+- Using **distance-based similarity** for classification  
+- Improving generalization when only a **few labeled samples** are available per class
+
+Prototype networks help create effective decision boundaries in the feature space.
 
 ---
 
-### 🔹 Module 4: Prototype-Based Learning Framework
-This module implements **prototype-based learning models**, particularly **Class-Wise Prototype Networks (PNet)**. The framework learns representative prototypes for each class in the feature space and uses **distance-based classification** to improve decision boundaries and support few-shot classification tasks.
+### 🔹 Module 4: Dual-Level Adaptive Sampling (DLAS)
+
+The **DLAS module** introduces adaptive sampling strategies to improve training efficiency.
+
+The framework includes:
+
+- **Adaptive Class Sampling (ACS)** – prioritizes important classes during training  
+- **Adaptive Instance Sampling (AIS)** – selects informative samples within each class  
+
+Combining these techniques improves **sample diversity, learning efficiency, and model generalization**.
 
 ---
 
-### 🔹 Module 5: DLAS-Based Feature Learning and Optimization
-This module integrates **Distance Learning with Adaptive Sampling (DLAS)** methods to enhance feature representation and improve sample selection during training. The combination of affinity-based sampling and prototype learning helps achieve better feature discrimination and model stability.
+### 🔹 Module 5: Prototype-Based Learning Architectures
+
+This module includes implementations of advanced prototype learning models.
+
+**IPNet (Influential Prototype Network)**
+
+- Learns robust class prototypes using instance-level information  
+- Reduces the influence of noisy samples
+
+**PANet (Prototype Alignment Network)**
+
+- Improves alignment between **support and query samples**  
+- Enhances feature representation for classification tasks
+
+These models improve **classification performance in few-shot learning scenarios**.
 
 ---
 
-### 🔹 Module 6: Evaluation and Performance Analysis
-This module evaluates the proposed methods using metrics such as **Accuracy, Precision, Recall, F1-score, and Confusion Matrix**. Comparative analysis with baseline models is conducted to assess improvements in **generalization, robustness, and interpretability** for medical image classification tasks.
+### 🔹 Module 6: Metadata-Guided Class Sampling (MCS)
 
-## ⚙️ Implementation
+This module explores the use of **metadata information** to guide sample selection during training.
 
-The implementation of this research is organized into multiple stages to develop and evaluate adaptive sampling and prototype-based few-shot learning methods for medical image classification.
+Key ideas:
 
-1. **Dataset Preparation**
-   - Medical imaging datasets including **ChestMNIST, PathMNIST, BloodMNIST, and ODIR** are collected.
-   - Images are preprocessed through normalization, resizing, and dataset splitting into **training, validation, and testing sets**.
-   - Few-shot settings are created by limiting the number of labeled samples per class.
+- Use dataset-level and class-level statistics  
+- Improve the sampling strategy using metadata insights  
+- Enhance learning stability in limited-data scenarios
 
-2. **Feature Extraction**
-   - Deep learning models are used to extract discriminative features from medical images.
-   - Feature embeddings are generated to represent each sample in a latent feature space.
-
-3. **Adaptive Sampling Mechanisms**
-   - **Adaptive Class Sampling (ACS)** dynamically selects informative classes during training.
-   - **Adaptive Instance Sampling (AIS)** identifies representative instances within each class.
-   - These strategies improve the efficiency of learning under limited data conditions.
-
-4. **Prototype-Based Learning**
-   - A **Class-Wise Prototype Network (PNet)** is implemented to learn representative prototypes for each class.
-   - Distance-based classification is used to assign labels based on similarity to class prototypes.
-
-5. **DLAS Integration**
-   - **Distance Learning with Adaptive Sampling (DLAS)** combines affinity-based sampling and prototype learning.
-   - This integration enhances feature discrimination and improves training stability.
-
-6. **Model Evaluation**
-   - Performance is evaluated using **Accuracy, Precision, Recall, F1-score, and Confusion Matrix**.
-   - Comparative experiments are conducted against baseline models to demonstrate improvements in generalization and robustness.
-
----
-
-## ⭐ Research Contributions
-
-The major contributions of this research include:
-
-- Development of **adaptive and affinity-based sampling strategies** to improve training efficiency in few-shot learning environments.
-
-- Introduction of **class-confidence and instance-level sampling mechanisms** to enhance model generalization under limited training data.
-
-- Design of a **prototype-based learning framework using Class-Wise Prototype Networks (PNet)** for improved representation learning and classification.
-
-- Integration of **Distance Learning with Adaptive Sampling (DLAS)** to optimize sample selection and feature learning.
-
-- Comprehensive evaluation of the proposed methods on **medical imaging datasets such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR**.
-
-- Demonstration of improved **robustness, interpretability, and performance** in AI models for medical image classification.
-
----
+This approach helps models focus on **informative and challenging samples**.
 
 ## 📂 Datasets Used
 
