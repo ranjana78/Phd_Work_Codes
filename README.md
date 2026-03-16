@@ -6,7 +6,9 @@ The work focuses on **few-shot learning**, **medical image analysis**, and **ada
 
 This repository is structured to ensure **reproducibility**, **clarity**, and **ease of navigation** for reviewers, collaborators, and future researchers.
 
----
+## 📂 Repository Structure
+
+```
 Phd_Work_Codes-main/
 │
 └── Phd_Codes-main/
@@ -63,6 +65,7 @@ Phd_Work_Codes-main/
         ├── datasets/
         │   └── dataset.txt
         └── papers/
+```
         
 ## 🎯 Primary Objective of the Research
 
