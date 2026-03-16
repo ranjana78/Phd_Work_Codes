@@ -67,19 +67,35 @@ Phd_Work_Codes-main/
         └── papers/
 ```
         
-## 🎯 Primary Objective of the Research
+## 🎯 Research Overview
 
-The primary objective of this research is to develop **efficient few-shot learning frameworks for medical image classification** by integrating **adaptive sampling strategies and prototype-based deep learning models**.
+My research focuses on improving **few-shot learning for medical image classification** by enhancing **Prototypical Networks within a meta-learning framework**. The work addresses the critical challenge of **data scarcity in clinical AI**, where medical datasets often contain very limited labeled samples.
 
-Medical imaging datasets often suffer from **limited labeled data**, making it challenging for traditional deep learning models to achieve high performance. This research addresses this challenge by designing methods that can learn effectively from **a small number of labeled samples per class**.
+Specifically, the research aims to design more **robust and discriminative prototype-based learning mechanisms** by improving how prototypes are constructed, how features are represented and refined, and how episodic training tasks are sampled.
 
-The main goals of the research include:
+---
 
-- Developing **prototype-based learning models** to represent each class using discriminative feature prototypes.
-- Designing **adaptive sampling strategies** to select informative training samples in few-shot learning scenarios.
-- Improving **feature representation and generalization** of deep learning models for medical image classification.
-- Enhancing learning efficiency through **Dual-Level Adaptive Sampling (DLAS)** and affinity-based sampling methods.
-- Evaluating the proposed methods on **publicly available medical imaging datasets** such as ChestMNIST, PathMNIST, BloodMNIST, and ODIR.
+## ⭐ Key Research Contributions
+
+### 1️⃣ Prototype Construction Improvement
+Developing **influence-based reweighting strategies** so that more informative support samples contribute more strongly to class prototypes, improving the robustness of prototype representations.
+
+### 2️⃣ Feature Refinement
+Selecting and emphasizing the most **discriminative feature maps and channels** to improve prototype quality and enhance classification performance.
+
+### 3️⃣ Domain-Specific Feature Integration
+Incorporating **texture-aware representations** such as **wavelet-based features** to capture subtle morphological patterns commonly found in medical images.
+
+### 4️⃣ Optimized Episodic Sampling
+Designing **adaptive and metadata-guided sampling strategies** to construct more informative and balanced few-shot learning tasks during meta-training.
+
+---
+
+## 🚀 Research Goal
+
+Overall, this research aims to develop **efficient, robust, and interpretable few-shot learning frameworks** capable of accurately classifying medical images even when **only a few labeled samples are available**.  
+
+By addressing the data scarcity problem in medical imaging, the proposed approaches aim to improve the **reliability and applicability of AI systems in real-world healthcare environments**.
 
 Overall, the research aims to **improve the robustness, efficiency, and accuracy of few-shot medical image classification models**, enabling reliable performance even when training data is limited.
 
