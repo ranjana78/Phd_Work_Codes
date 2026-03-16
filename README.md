@@ -186,6 +186,29 @@ The experiments in this research are conducted on publicly available **medical i
 - **ODIR (Ocular Disease Intelligent Recognition)**
   - A retinal fundus image dataset for ocular disease diagnosis.
   - Contains images representing various eye diseases.
+- **DermaMNIST**
+  - A dermatoscopic skin lesion dataset from the MedMNIST collection.
+  - Contains images of different skin lesion categories for multi-class classification tasks.
+
+- **OrganAMNIST**
+  - A medical imaging dataset consisting of abdominal CT images.
+  - Used for multi-class classification of different abdominal organ regions.
+
+- **Derm7pt**
+  - A dermoscopic image dataset developed for skin lesion analysis.
+  - Includes seven diagnostic criteria used for melanoma detection.
+
+- **SD-198**
+  - A large-scale skin disease dataset containing clinical images of various dermatological conditions.
+  - Designed for classification across a wide range of skin diseases.
+
+- **ISIC-2018**
+  - A dermoscopic skin lesion dataset from the International Skin Imaging Collaboration challenge.
+  - Used for lesion classification and melanoma detection tasks.
+
+- **ISIC-2019**
+  - An extended dermoscopic image dataset from the ISIC challenge.
+  - Contains multiple skin lesion categories for large-scale skin cancer classification.
 
 These datasets are used to evaluate the effectiveness of **few-shot learning, adaptive sampling, and prototype-based learning approaches** in medical image classification.
 
